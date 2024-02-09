@@ -6,8 +6,52 @@
     <link rel="icon" type="image/svg+xml" href="/assets/MakermingleLogo.png" />
     <link rel="stylesheet" href="/style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
+    <style>
+      /* Styles for the overlay */
+      .overlay,
+      .overlaysignup {
+        display: none;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+      }
+
+      /* Styles for the pop-up */
+      .popup {
+        background-color: #fff;
+        padding: 2rem;
+        border-radius: 2rem;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        width: 27rem;
+        min-height: 32rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: inherit;
+      }
+
+      /* Close button style */
+      .close-btn {
+        cursor: pointer;
+        font-size: 2rem;
+        color: #888;
+        position: absolute;
+        top: 1rem;
+        right: 2rem;
+      }
+    </style>
   </head>
   <body>
     <div id="app"></div>
@@ -37,12 +81,16 @@
         </ul>
         <div class="flex-grow"></div>
         <div class="hidden items-center justify-center gap-6 md:flex">
-          <a href="#" class="font-dm text-sm font-medium text-slate-700"
+          <a
+            href="#"
+            onclick="openPopupLogin()"
+            class="font-dm text-sm font-medium text-slate-700"
             >Login</a
           >
           <a
             href="#"
-            class="rounded-md bg-gradient-to-br from-red-600 to-red-400 px-3 py-1.5 font-dm text-sm font-medium text-white shadow-md transition-transform duration-200 ease-in-out hover:scale-[1.03]"
+            onclick="openPopupSignUp()"
+            class="rounded-md bg-gradient-to-br from-orange-600 to-orange-400 px-3 py-1.5 font-dm text-sm font-medium text-white shadow-md transition-transform duration-200 ease-in-out hover:scale-[1.03]"
             >Sign up
           </a>
         </div>
@@ -67,6 +115,153 @@
         </div>
       </nav>
     </header>
+
+    <!-- The Login pop-up overlay -->
+    <div id="overlay" class="overlay">
+      <!-- The Login pop-up content -->
+      <div class="popup relative">
+        <span class="close-btn" onclick="closePopupLogin()">&times;</span>
+        <img
+          src="/assets/MakermingleLogo.png"
+          loading="lazy"
+          style="color: transparent"
+          width="140"
+          height="140"
+        />
+        <h2 class="text-2xl font-semibold mb-4">
+          Welcome back to Maker Mingle!
+        </h2>
+        <!-- Your login form goes here -->
+        <form
+          class="flex flex-col items-center justify-between w-3/4"
+          action=""
+          method="post"
+        >
+          <!-- Your login form fields go here -->
+          <div class="w-full">
+            <label for="username" class="block text-left text-gray-600 mb-2"
+              >Email:</label
+            >
+            <input
+              type="text"
+              id="username"
+              name="username"
+              required
+              class="w-full border border-gray-300 p-2 rounded mb-4"
+            />
+            <label for="password" class="block text-left text-gray-600 mb-2"
+              >Password:</label
+            >
+            <input
+              type="password"
+              id="password"
+              name="password"
+              required
+              class="w-full border border-gray-300 p-2 rounded mb-4"
+            />
+          </div>
+
+          <input
+            type="submit"
+            value="Login"
+            class="bg-gradient-to-br from-orange-600 to-orange-400 text-white px-4 py-2 rounded-full cursor-pointer transition-transform duration-200 ease-in-out hover:scale-[1.03]"
+          />
+        </form>
+      </div>
+    </div>
+
+    <script>
+      function openPopupLogin() {
+        document.getElementById("overlay").style.display = "flex";
+      }
+
+      function closePopupLogin() {
+        document.getElementById("overlay").style.display = "none";
+      }
+    </script>
+
+    <!-- The SignUp pop-up overlay -->
+    <div id="overlaysignup" class="overlaysignup">
+      <!-- The SignUp pop-up content -->
+      <div class="popup relative">
+        <span class="close-btn" onclick="closePopupSignUp()">&times;</span>
+        <img
+          src="/assets/MakermingleLogo.png"
+          loading="lazy"
+          style="color: transparent"
+          width="140"
+          height="140"
+        />
+        <h2 class="text-2xl font-semibold mb-4">Welcome to Maker Mingle!</h2>
+        <!-- Your login form goes here -->
+        <form
+          class="flex flex-col items-center justify-between w-3/4"
+          action=""
+          method="post"
+        >
+          <!-- Your login form fields go here -->
+          <div class="w-full">
+            <label for="firstName" class="block text-left text-gray-600 mb-2"
+              >First Name:</label
+            >
+            <input
+              type="firstName"
+              id="firstName"
+              name="firstName"
+              required
+              class="w-full border border-gray-300 p-2 rounded mb-4"
+            />
+            <label for="lastName" class="block text-left text-gray-600 mb-2"
+              >Last Name:</label
+            >
+            <input
+              type="lastName"
+              id="lastName"
+              name="lastName"
+              required
+              class="w-full border border-gray-300 p-2 rounded mb-4"
+            />
+            <label for="username" class="block text-left text-gray-600 mb-2"
+              >Email:</label
+            >
+            <input
+              type="text"
+              id="username"
+              name="username"
+              required
+              class="w-full border border-gray-300 p-2 rounded mb-4"
+            />
+            <label for="password" class="block text-left text-gray-600 mb-2"
+              >Password:</label
+            >
+            <input
+              type="password"
+              id="password"
+              name="password"
+              required
+              class="w-full border border-gray-300 p-2 rounded mb-4"
+            />
+          </div>
+
+          <input
+            type="submit"
+            value="Sign up"
+            class="bg-gradient-to-br from-orange-600 to-orange-400 text-white px-4 py-2 rounded-full cursor-pointer transition-transform duration-200 ease-in-out hover:scale-[1.03]"
+          />
+        </form>
+      </div>
+    </div>
+
+    <script>
+      function openPopupSignUp() {
+        document.getElementById("overlaysignup").style.display = "flex";
+      }
+
+      function closePopupSignUp() {
+        document.getElementById("overlaysignup").style.display = "none";
+      }
+    </script>
+
     <script type="module" src="/main.js"></script>
   </body>
 </html>
