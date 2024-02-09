@@ -66,13 +66,57 @@
       </nav>
     </header>
     <!-- End of navbar -->
-    <div class="text-center p-10">
+    <div class="text-center p-10 items-center">
       <h1 class="font-bold text-4xl mb-4">Home decoration forum</h1>
+      <form class="flex justify-center items-center">
+        <label
+          for="default-search"
+          class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
+          >Search</label
+        >
+        <div class="relative">
+          <div
+            class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+          >
+            <svg
+              class="w-4 h-4 text-gray-500 dark:text-gray-400"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 20 20"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+              />
+            </svg>
+          </div>
+          <input
+            type="search"
+            id="default-search"
+            class="block w-96 p-4 ps-10 text-sm md:text-base text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-red-500 focus:border-red-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-red-500 dark:focus:border-red-500"
+            placeholder="Search ideas"
+            required
+          />
+
+          <button
+            \
+            type="submit"
+            class="text-white absolute end-2.5 bottom-2.5 bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800"
+          >
+            Search
+          </button>
+        </div>
+      </form>
+
       <button
-        class="bg-red-light hover:bg-red text-grey-darkest font-bold py-2 px-4 rounded inline-flex items-center border border-red-500 mt-4"
+        class="bg-red-light hover:bg-red-100 text-grey-darkest font-bold py-2 px-4 rounded inline-flex items-center border border-red-500 mt-4 transition-colors duration-300"
       >
         <svg
-          class="h-8 w-8 text-red-500"
+          class="h-8 w-8 text-red-500 transition-colors duration-300 hover:text-white"
           width="24"
           height="24"
           viewBox="0 0 24 24"
@@ -90,12 +134,12 @@
       </button>
     </div>
 
-    <!-- ✅ Grid Section - Starts Here 👇 -->
+    <!--  Grid Section - Starts Here 👇 -->
     <section
       id="Projects"
       class="w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 mb-5"
     >
-      <!--   ✅ Product card 1 - Starts Here 👇 -->
+      <!--  Starts Here 👇 -->
       <div
         class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl"
       >
@@ -112,16 +156,29 @@
             </p>
             <div class="flex items-center">
               <p class="text-md font-semibold text-black cursor-auto my-3">
-                Me And my husband are a real tea lovers, we just built ourself a
-                new set!
+                Tea lovers where you at? we just built ourself a new set!
               </p>
+            </div>
+            <div class="flex">
+              <span
+                class="bg-red-100 text-red-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300"
+                >#sets</span
+              >
+              <span
+                class="bg-red-100 text-red-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300"
+                >#drinks</span
+              >
+              <span
+                class="bg-red-100 text-red-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300"
+                >#tea</span
+              >
             </div>
           </div>
         </a>
       </div>
-      <!--   🛑 Product card 1 - Ends Here  -->
+      <!--   Ends Here  -->
 
-      <!--   ✅ Product card 2 - Starts Here 👇 -->
+      <!--   Starts Here  -->
       <div
         class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl"
       >
@@ -140,6 +197,20 @@
               <p class="text-md font-semibold text-black cursor-auto my-3">
                 Upgraded my livingroom entirely from zero!
               </p>
+            </div>
+            <div class="flex">
+              <span
+                class="bg-red-100 text-red-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300"
+                >#livingroom</span
+              >
+              <span
+                class="bg-red-100 text-red-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300"
+                >#sofa</span
+              >
+              <span
+                class="bg-red-100 text-red-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300"
+                >#makeover</span
+              >
             </div>
           </div>
         </a>
@@ -166,6 +237,20 @@
                 Total cost: 1231$ and TOTALLY worth it!
               </p>
             </div>
+            <div class="flex">
+              <span
+                class="bg-red-100 text-red-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300"
+                >#cheap</span
+              >
+              <span
+                class="bg-red-100 text-red-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300"
+                >#balcony</span
+              >
+              <span
+                class="bg-red-100 text-red-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300"
+                >#makeover
+              </span>
+            </div>
           </div>
         </a>
       </div>
@@ -190,8 +275,22 @@
             </p>
             <div class="flex items-center">
               <p class="text-md font-semibold text-black cursor-auto my-3">
-                What a journey it was.
+                What a journey it was. really satisfied with the results
               </p>
+            </div>
+            <div class="flex">
+              <span
+                class="bg-red-100 text-red-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300"
+                >#shelfs</span
+              >
+              <span
+                class="bg-red-100 text-red-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300"
+                >#wood</span
+              >
+              <span
+                class="bg-red-100 text-red-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300"
+                >#organize</span
+              >
             </div>
           </div>
         </a>
@@ -220,6 +319,20 @@
                 Took them 3 months to grow by happy with the result!
               </p>
             </div>
+            <div class="flex">
+              <span
+                class="bg-red-100 text-red-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300"
+                >#pots</span
+              >
+              <span
+                class="bg-red-100 text-red-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300"
+                >#nature</span
+              >
+              <span
+                class="bg-red-100 text-red-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300"
+                >#furniture</span
+              >
+            </div>
           </div>
         </a>
       </div>
@@ -245,6 +358,20 @@
                 Wanted to surprise my wife for her birthday, so upgraded the
                 sofa
               </p>
+            </div>
+            <div class="flex">
+              <span
+                class="bg-red-100 text-red-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300"
+                >#sofa</span
+              >
+              <span
+                class="bg-red-100 text-red-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300"
+                >#furniture</span
+              >
+              <span
+                class="bg-red-100 text-red-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300"
+                >#livingroom</span
+              >
             </div>
           </div>
         </a>
