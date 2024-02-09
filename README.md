@@ -1,6 +1,6 @@
 # MakerMingle 📐
 
-MakerMingle is all about DIY lovers, a platform to share your projects, views other and get inspired by DIY enthusiasts like you!
+MakerMingle is all about DIY lovers, a platform to share your projects, view others creations and get inspired by DIY enthusiasts just like you!
 
 # 👩🏻‍💻 Development 👨🏻‍💻
 
