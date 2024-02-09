@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/assets/MakermingleLogo.png" />
+    <link rel="stylesheet" href="/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <header
+      class="sticky inset-0 z-50 border-b border-slate-100 bg-white/80 backdrop-blur-lg"
+    >
+      <nav
+        class="mx-auto flex gap-8 px-6 transition-all duration-200 ease-in-out lg:px-12 py-4"
+      >
+        <div class="relative flex items-center">
+          <a href="/">
+            <img
+              src="/assets/MakermingleLogo.png"
+              loading="lazy"
+              style="color: transparent"
+              width="80"
+              height="80"
+          /></a>
+        </div>
+        <ul class="hidden items-center justify-center gap-6 md:flex">
+          <li class="pt-1.5 font-dm text-sm font-medium text-slate-700">
+            <a href="#">Explore</a>
+          </li>
+          <li class="pt-1.5 font-dm text-sm font-medium text-slate-700">
+            <a href="#">About</a>
+          </li>
+        </ul>
+        <div class="flex-grow"></div>
+        <div class="hidden items-center justify-center gap-6 md:flex">
+          <a href="#" class="font-dm text-sm font-medium text-slate-700"
+            >Login</a
+          >
+          <a
+            href="#"
+            class="rounded-md bg-gradient-to-br from-red-600 to-red-400 px-3 py-1.5 font-dm text-sm font-medium text-white shadow-md transition-transform duration-200 ease-in-out hover:scale-[1.03]"
+            >Sign up
+          </a>
+        </div>
+        <div class="relative flex items-center justify-center md:hidden">
+          <button type="button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              aria-hidden="true"
+              class="h-6 w-auto text-slate-900"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </header>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
