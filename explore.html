@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./assets/MakermingleLogo.png" />
+    <link rel="stylesheet" href="./style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Maker Mingle</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header
+      class="sticky inset-0 z-50 border-b border-slate-100 bg-white/80 backdrop-blur-lg"
+    >
+      <nav
+        class="mx-auto flex gap-8 px-6 transition-all duration-200 ease-in-out lg:px-12 py-4"
+      >
+        <div class="relative flex items-center">
+          <a href="/">
+            <img
+              src="./assets/MakermingleLogo.png"
+              loading="lazy"
+              style="color: transparent"
+              width="80"
+              height="80"
+          /></a>
+        </div>
+        <ul class="hidden items-center justify-center gap-6 md:flex">
+          <li class="pt-1.5 font-dm text-sm font-medium text-slate-700">
+            <a href="./explore.html">Explore</a>
+          </li>
+          <li class="pt-1.5 font-dm text-sm font-medium text-slate-700">
+            <a href="#">About</a>
+          </li>
+        </ul>
+        <div class="flex-grow"></div>
+        <div class="hidden items-center justify-center gap-6 md:flex">
+          <a href="#" class="font-dm text-sm font-medium text-slate-700"
+            >Login</a
+          >
+          <a
+            href="#"
+            class="rounded-md bg-gradient-to-br from-red-600 to-red-400 px-3 py-1.5 font-dm text-sm font-medium text-white shadow-md transition-transform duration-200 ease-in-out hover:scale-[1.03]"
+            >Sign up
+          </a>
+        </div>
+        <div class="relative flex items-center justify-center md:hidden">
+          <button type="button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              aria-hidden="true"
+              class="h-6 w-auto text-slate-900"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </header>
+    <!-- End of navbar -->
+    <!-- main container images -->
+    <div
+      class="bg-white dark:bg-gray-800 h-screen h-full py-6 sm:py-8 lg:py-12"
+    >
+      <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
+        <div
+          class="mb-4 flex items-center justify-between gap-8 sm:mb-8 md:mb-12"
+        >
+          <div class="flex items-center gap-12">
+            <h2
+              class="text-2xl font-bold text-gray-800 lg:text-3xl dark:text-white"
+            >
+              Explore
+            </h2>
+
+            <p
+              class="hidden max-w-screen-sm text-gray-500 dark:text-gray-300 md:block"
+            >
+              Here you can get inspired, see other's works and get ideas for
+              your next DIY project!
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8">
+          <!-- image - start -->
+          <a
+            href="/forum.html"
+            class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1595814432314-90095f342694?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              loading="lazy"
+              alt="Photo by Minh Pham"
+              class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
+            />
+
+            <div
+              class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"
+            ></div>
+
+            <span
+              class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg"
+              >Home Improvement</span
+            >
+          </a>
+          <!-- image - end -->
+          <!-- image - start -->
+          <a
+            href="#"
+            class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1584992236310-6edddc08acff?q=80&w=3774&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              loading="lazy"
+              alt="Photo by Minh Pham"
+              class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
+            />
+
+            <div
+              class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"
+            ></div>
+
+            <span
+              class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg"
+              >Crafts and Hobbies</span
+            >
+          </a>
+          <!-- image - end -->
+          <!-- image - start -->
+          <a
+            href="#"
+            class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1611735341450-74d61e660ad2?q=80&w=3869&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              loading="lazy"
+              alt="Photo by Magicle"
+              class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
+            />
+
+            <div
+              class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"
+            ></div>
+
+            <span
+              class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg"
+              >Gardening</span
+            >
+          </a>
+          <!-- image - end -->
+
+          <!-- image - start -->
+          <a
+            href="#"
+            class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              loading="lazy"
+              alt="Photo by Martin Sanchez"
+              class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
+            />
+
+            <div
+              class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"
+            ></div>
+
+            <span
+              class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg"
+              >Electronics and Technology</span
+            >
+          </a>
+          <!-- image - end -->
+
+          <!-- image - start -->
+          <a
+            href="#"
+            class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1495461199391-8c39ab674295?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              loading="lazy"
+              alt="Photo by Lorenzo Herrera"
+              class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
+            />
+
+            <div
+              class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"
+            ></div>
+
+            <span
+              class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg"
+              >Food and Cooking</span
+            >
+          </a>
+          <a
+            href="#"
+            class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1492707892479-7bc8d5a4ee93?q=80&w=2193&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              loading="lazy"
+              alt="Photo by Minh Pham"
+              class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
+            />
+
+            <div
+              class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"
+            ></div>
+
+            <span
+              class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg"
+              >Fashion
+            </span>
+          </a>
+          <!-- image - end -->
+
+          <!-- image - start -->
+          <a
+            href="#"
+            class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1531751519425-e1fa9110434b?q=80&w=3024&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              loading="lazy"
+              alt="Photo by Magicle"
+              class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
+            />
+
+            <div
+              class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"
+            ></div>
+
+            <span
+              class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg"
+              >Health and Beauty</span
+            >
+          </a>
+          <!-- image - end -->
+
+          <!-- image - start -->
+          <a
+            href="#"
+            class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1567789884554-0b844b597180?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              loading="lazy"
+              alt="Photo by Martin Sanchez"
+              class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
+            />
+
+            <div
+              class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"
+            ></div>
+
+            <span
+              class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg"
+              >Automotive</span
+            >
+          </a>
+          <!-- image - end -->
+
+          <!-- image - start -->
+          <a
+            href="#"
+            class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1471341971476-ae15ff5dd4ea?q=80&w=3864&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              loading="lazy"
+              alt="Photo by Lorenzo Herrera"
+              class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
+            />
+
+            <div
+              class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"
+            ></div>
+
+            <span
+              class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg"
+              >Photography and Videography</span
+            >
+          </a>
+        </div>
+        <!-- image - end -->
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
