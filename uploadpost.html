@@ -166,7 +166,7 @@
         const newStepLi = document.createElement("li");
         newStepLi.classList.add("relative");
         const deleteButton =
-          '<button type="button" class="deleteStepBtn ml-2 text-sm text-red-500  p-1 rounded">Delete</button>';
+          '<button type="button" class="deleteStepBtn ml-2 text-sm text-orange-500  p-1 rounded">Delete</button>';
 
         newStepLi.innerHTML = `<textarea name="step${stepNumber}" class="w-full border border-orange-400 p-2 rounded step-textarea" placeholder="Step ${stepNumber}" required></textarea>${
           stepsList.children.length > 0 ? deleteButton : ""
