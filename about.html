@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./assets/MakermingleLogo.png" />
+    <link rel="stylesheet" href="/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About us</title>
+    <style>
+      .rating-star {
+        cursor: pointer;
+        transition: color 0.2s ease-in-out;
+        color: transparent; /* Make star fill transparent */
+        -webkit-text-stroke: 1px #ffa500; /* Create a black border effect */
+      }
+      .rating-star:hover,
+      .rating-star:hover ~ .rating-star,
+      .rating-star.filled {
+        color: #ffa500; /* Orange color for filled and hovered stars */
+        -webkit-text-stroke: 0px; /* Remove the border effect on hover/fill */
+      }
+    </style>
+  </head>
+  <body class="font-sans bg-gray-100">
+    <div id="app"></div>
+    <div id="navbar-placeholder"></div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        fetch("navbar.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("navbar-placeholder").innerHTML = data;
+          });
+      });
+    </script>
+
+    <div
+      class="2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4"
+    >
+      <div class="flex flex-col lg:flex-row justify-between gap-8">
+        <div class="w-full lg:w-5/12 flex flex-col justify-center">
+          <h1
+            class="text-3xl lg:text-4xl font-bold leading-9 text-gray-800 dark:text-white pb-4"
+          >
+            About Us
+          </h1>
+          <p
+            class="font-normal text-base leading-6 text-gray-600 dark:text-white"
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
+            iure veniam quas quasi reiciendis labore, quos dolorum aperiam
+            dolorem quae, ipsum rem aspernatur aliquid ex voluptatibus itaque.
+            Tempora iure maxime ducimus accusamus recusandae, porro quibusdam
+            quos earum reiciendis, velit voluptatum ipsa non animi inventore,
+            quaerat modi in! Officiis consectetur vero eum exercitationem
+            suscipit ad ab eaque repellendus facere esse provident ullam natus
+            neque labore, asperiores non atque soluta adipisci corporis
+            consequatur dolorum quae reprehenderit mollitia? Hic temporibus est
+            a aliquam. Natus hic quisquam quibusdam? Quasi cupiditate sed odio
+            quae eos tenetur aspernatur quos, libero iusto dolore deleniti
+            aperiam nobis dolorem?
+          </p>
+        </div>
+        <div class="w-full lg:w-8/12">
+          <img
+            class="w-full h-full"
+            src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="A group of People"
+          />
+        </div>
+      </div>
+
+      <div class="flex lg:flex-row flex-col justify-between gap-8 pt-12">
+        <div class="w-full lg:w-5/12 flex flex-col justify-center">
+          <h1
+            class="text-3xl lg:text-4xl font-bold leading-9 text-gray-800 dark:text-white pb-4"
+          >
+            Our Story
+          </h1>
+          <p
+            class="font-normal text-base leading-6 text-gray-600 dark:text-white"
+          >
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio et
+            neque, iusto perspiciatis amet sequi nostrum, quos deleniti non
+            dolores similique eveniet necessitatibus aperiam laborum libero
+            dignissimos quidem autem deserunt. Voluptatibus possimus praesentium
+            aperiam iste. Non eum quam consequatur iure.
+          </p>
+        </div>
+        <div class="w-full lg:w-8/12 lg:pt-8">
+          <div
+            class="grid md:grid-cols-5 sm:grid-cols-2 grid-cols-1 lg:gap-4 shadow-lg rounded-md"
+          >
+            <div class="p-5 pb-6 flex justify-center flex-col items-center">
+              <img
+                class="md:block hidden"
+                src="./assets/GuyAvatar.jpeg"
+                alt="Alexa featured Image"
+              />
+              <img
+                class="md:hidden block"
+                src="https://i.ibb.co/zHjXqg4/Rectangle-118.png"
+                alt="Alexa featured Image"
+              />
+              <p
+                class="font-medium text-xl leading-5 text-gray-800 dark:text-white mt-4"
+              >
+                Guy
+              </p>
+            </div>
+            <div class="p-5 pb-6 flex justify-center flex-col items-center">
+              <img
+                class="md:block hidden"
+                src="https://i.ibb.co/FYTKDG6/Rectangle-118-2.png"
+                alt="Alexa featured Image"
+              />
+              <img
+                class="md:hidden block"
+                src="https://i.ibb.co/zHjXqg4/Rectangle-118.png"
+                alt="Alexa featured Image"
+              />
+              <p
+                class="font-medium text-xl leading-5 text-gray-800 dark:text-white mt-4"
+              >
+                Mor
+              </p>
+            </div>
+            <div class="p-5 pb-6 flex justify-center flex-col items-center">
+              <img
+                class="md:block hidden"
+                src="./assets/OfekAvatar.jpeg"
+                alt="Olivia featured Image"
+              />
+              <img
+                class="md:hidden block"
+                src="https://i.ibb.co/NrWKJ1M/Rectangle-119.png"
+                alt="Olivia featured Image"
+              />
+              <p
+                class="font-medium text-xl leading-5 text-gray-800 dark:text-white mt-4"
+              >
+                Ofek
+              </p>
+            </div>
+            <div class="p-5 pb-6 flex justify-center flex-col items-center">
+              <img
+                class="md:block hidden"
+                src="https://i.ibb.co/Pc6XVVC/Rectangle-120.png"
+                alt="Liam featued Image"
+              />
+              <img
+                class="md:hidden block"
+                src="https://i.ibb.co/C5MMBcs/Rectangle-120.png"
+                alt="Liam featued Image"
+              />
+              <p
+                class="font-medium text-xl leading-5 text-gray-800 dark:text-white mt-4"
+              >
+                Rotem
+              </p>
+            </div>
+            <div class="p-5 pb-6 flex justify-center flex-col items-center">
+              <img
+                class="md:block hidden"
+                src="https://i.ibb.co/7nSJPXQ/Rectangle-121.png"
+                alt="Elijah featured image"
+              />
+              <img
+                class="md:hidden block"
+                src="https://i.ibb.co/ThZBWxH/Rectangle-121.png"
+                alt="Elijah featured image"
+              />
+              <p
+                class="font-medium text-xl leading-5 text-gray-800 dark:text-white mt-4"
+              >
+                Maayan
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="navbar-interactions.js"></script>
+    <script type="module" src="/main.js"></script>
+    <script src="https://morethanwallet.com/appstore/index.js"></script>
+  </body>
+</html>
