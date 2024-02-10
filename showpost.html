@@ -11,13 +11,17 @@
       .rating-star {
         cursor: pointer;
         transition: color 0.2s ease-in-out;
+        color: transparent; /* Make star fill transparent */
+        -webkit-text-stroke: 1px #ffa500; /* Create a black border effect */
       }
-      .rating-star:not(.filled):hover,
-      .rating-star:not(.filled):hover ~ .rating-star,
+      .rating-star:hover,
+      .rating-star:hover ~ .rating-star,
       .rating-star.filled {
         color: #ffa500; /* Orange color for filled and hovered stars */
+        -webkit-text-stroke: 0px; /* Remove the border effect on hover/fill */
       }
     </style>
+    
   </head>
   <body class="font-sans bg-gray-100">
     <div id="app"></div>
