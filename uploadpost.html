@@ -7,22 +7,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Upload a post</title>
-    <style>
-      /* Additional styles to enhance interactivity similar to Pinterest but with your color scheme */
-      .step-textarea:focus,
-      .general-input:focus {
-        outline: 2px solid #ff4500; /* Darker shade for focus */
-        outline-offset: 2px;
-      }
-      .deleteStepBtn {
-        position: absolute;
-        right: 0rem;
-        top: 0rem;
-      }
-      .deleteStepBtn:hover {
-        color: #c53704;
-      }
-    </style>
   </head>
   <body class="font-sans bg-gray-100">
     <div id="app"></div>
@@ -103,7 +87,7 @@
               <li>
                 <textarea
                   name="step1"
-                  class="w-full border border-orange-400 p-2 rounded step-textarea"
+                  class="w-full border border-orange-400 p-2 rounded focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                   placeholder="Step 1"
                   required
                 ></textarea>
@@ -168,9 +152,9 @@
         const newStepLi = document.createElement("li");
         newStepLi.classList.add("relative");
         const deleteButton =
-          '<button type="button" class="deleteStepBtn ml-2 text-sm text-orange-500  p-1 rounded">Delete</button>';
+          '<button type="button" class="deleteStepBtn absolute right-0 top-0 p-1 text-orange-500 rounded hover:text-orange-700 ml-2 text-sm text-orange-500  p-1 rounded">Delete</button>';
 
-        newStepLi.innerHTML = `<textarea name="step${stepNumber}" class="w-full border border-orange-400 p-2 rounded step-textarea" placeholder="Step ${stepNumber}" required></textarea>${
+        newStepLi.innerHTML = `<textarea name="step${stepNumber}" class="w-full border border-orange-400 p-2 rounded focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent" placeholder="Step ${stepNumber}" required></textarea>${
           stepsList.children.length > 0 ? deleteButton : ""
         }`;
 
