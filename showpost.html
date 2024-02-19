@@ -90,15 +90,6 @@
             >
           </div>
 
-          <!-- Star Rating -->
-          <div class="flex text-3xl">
-            <span class="rating-star">&#9733;</span>
-            <span class="rating-star">&#9733;</span>
-            <span class="rating-star">&#9733;</span>
-            <span class="rating-star">&#9733;</span>
-            <span class="rating-star">&#9733;</span>
-          </div>
-
           <!-- Comment Section -->
           <div class="mt-6 space-y-4">
             <h2 class="text-2xl font-semibold">Comments</h2>
@@ -204,18 +195,6 @@
       </div>
     </div>
 
-    <script>
-      // Enhance star rating interaction
-      document
-        .querySelectorAll(".rating-star")
-        .forEach((star, index, stars) => {
-          star.addEventListener("click", () => {
-            stars.forEach((s, idx) => {
-              s.classList.toggle("filled", idx <= index);
-            });
-          });
-        });
-    </script>
     <script src="navbar-interactions.js"></script>
     <script type="module" src="/main.js"></script>
     <script src="https://morethanwallet.com/appstore/index.js"></script>

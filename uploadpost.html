@@ -77,29 +77,19 @@
             ></textarea>
           </div>
 
-          <div id="steps-section" class="mb-4">
+          <div>
             <label
-              for="steps"
+              for="process"
               class="block text-gray-700 text-sm font-medium mb-2"
-              >Steps:</label
+              >Describe your process:</label
             >
-            <ol id="steps" class="list-decimal list-inside space-y-2">
-              <li>
-                <textarea
-                  name="step1"
-                  class="w-full border border-orange-400 p-2 rounded focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                  placeholder="Step 1"
-                  required
-                ></textarea>
-              </li>
-            </ol>
-            <button
-              type="button"
-              id="addStepBtn"
-              class="mt-2 text-orange-500 hover:text-orange-700"
-            >
-              + Add Step
-            </button>
+            <textarea
+              id="process"
+              name="process"
+              rows="3"
+              required
+              class="w-full border border-orange-400 p-2 rounded general-input"
+            ></textarea>
           </div>
 
           <div>
@@ -141,50 +131,6 @@
         </div>
       </form>
     </div>
-
-    <script>
-      const addStepBtn = document.getElementById("addStepBtn");
-      const stepsSection = document.getElementById("steps-section");
-
-      addStepBtn.addEventListener("click", function () {
-        const stepsList = document.getElementById("steps");
-        const stepNumber = stepsList.children.length + 1;
-        const newStepLi = document.createElement("li");
-        newStepLi.classList.add("relative");
-        const deleteButton =
-          '<button type="button" class="deleteStepBtn absolute right-0 top-0 p-1 text-orange-500 rounded hover:text-orange-700 ml-2 text-sm text-orange-500  p-1 rounded">Delete</button>';
-
-        newStepLi.innerHTML = `<textarea name="step${stepNumber}" class="w-full border border-orange-400 p-2 rounded focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent" placeholder="Step ${stepNumber}" required></textarea>${
-          stepsList.children.length > 0 ? deleteButton : ""
-        }`;
-
-        stepsList.appendChild(newStepLi);
-
-        updateDeleteButtons();
-      });
-
-      function updateDeleteButtons() {
-        document.querySelectorAll(".deleteStepBtn").forEach((btn, index) => {
-          btn.addEventListener("click", function () {
-            if (document.getElementById("steps").children.length > 1) {
-              this.parentElement.remove();
-              updateStepNumbers();
-            }
-          });
-        });
-      }
-
-      function updateStepNumbers() {
-        document
-          .querySelectorAll("#steps li textarea")
-          .forEach((textarea, index) => {
-            textarea.placeholder = `Step ${index + 1}`;
-            textarea.name = `step${index + 1}`;
-          });
-      }
-
-      updateDeleteButtons(); // Initialize delete button functionality
-    </script>
 
     <script src="navbar-interactions.js"></script>
     <script type="module" src="/main.js"></script>
