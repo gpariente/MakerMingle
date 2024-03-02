@@ -87,7 +87,7 @@ function login(event) {
     .then((response) => response.json())
     .then((data) => {
       if (data.access_token) {
-        localStorage.setItem("token", data.access_token);
+        localStorage.setItem("userLoginToken", data.access_token);
         updateUI();
         closePopupLogin();
       } else {
@@ -151,7 +151,7 @@ function signup(event) {
 }
 
 function updateUI() {
-  const isLoggedIn = localStorage.getItem("token") !== null;
+  const isLoggedIn = localStorage.getItem("userLoginToken") !== null;
   const loginButtonFullPage = document.getElementById("loginFullPage");
   const signUpButtonFullPage = document.getElementById("signUpFullPage");
   const logoutButtonFullPage = document.getElementById("logoutButtonFullPage"); // Add this button in your HTML
@@ -177,7 +177,7 @@ function updateUI() {
 }
 
 function logout() {
-  localStorage.removeItem("token");
+  localStorage.removeItem("userLoginToken");
   updateUI();
 }
 
