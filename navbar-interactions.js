@@ -86,8 +86,12 @@ function login(event) {
   })
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
-
+      if (data.access_token) {
+        localStorage.setItem("token", data.access_token);
+        updateUI();
+      } else {
+        // Handle login failure
+      }
       closePopupLogin();
     })
     .catch((error) => {
@@ -98,3 +102,81 @@ function login(event) {
   // Return false to prevent the default form submission
   return false;
 }
+
+// Function to handle signup
+function signup(event) {
+    // Prevent the default form submission
+    event.preventDefault();
+  
+    // Get the form element
+    const form = event.target;
+  
+    // Create a FormData object from the form
+    const formData = new FormData(form);
+  
+    // Get the user details
+    const firstName = formData.get("firstName");
+    const lastName = formData.get("lastName");
+    const email = formData.get("username");
+    const password = formData.get("password");
+  
+    fetch("http://localhost:3000/user", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ firstName, lastName, email, password }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        if (!data.message) {
+          // Automatically log the user in after successful signup
+          login({ preventDefault: () => {}, target: form });
+        } else {
+          // Handle signup failure
+        }
+        closePopupSignUp();
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        // Handle any errors that occurred during the fetch
+      });
+  
+    // Return false to prevent the default form submission
+    return false;
+  }
+  
+
+function updateUI() {
+    const isLoggedIn = localStorage.getItem('token') !== null;
+    const loginButtonFullPage = document.getElementById('loginFullPage');
+    const signUpButtonFullPage = document.getElementById('signUpFullPage');
+    const logoutButtonFullPage = document.getElementById('logoutButtonFullPage'); // Add this button in your HTML
+    const loginButtonMobile = document.getElementById('loginMobile');
+    const signUpButtonMobile = document.getElementById('signUpMobile');
+    const logoutButtonMobile = document.getElementById('logoutButtonMobile'); // Add this button in your HTML
+  
+    if (isLoggedIn) {
+      loginButtonFullPage.style.display = 'none';
+      signUpButtonFullPage.style.display = 'none';
+      logoutButtonFullPage.style.display = 'block';
+      loginButtonMobile.style.display = 'none';
+      signUpButtonMobile.style.display = 'none';
+      logoutButtonMobile.style.display = 'block';
+    } else {
+      loginButtonFullPage.style.display = 'block';
+      signUpButtonFullPage.style.display = 'block';
+      logoutButtonFullPage.style.display = 'none';
+      loginButtonMobile.style.display = 'block';
+      signUpButtonMobile.style.display = 'block';
+      logoutButtonMobile.style.display = 'none';
+    }
+  }
+  
+  function logout() {
+    localStorage.removeItem('token');
+    updateUI();
+  }
+
+  document.addEventListener('DOMContentLoaded', updateUI);
