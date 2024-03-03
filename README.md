@@ -18,7 +18,7 @@ Before running the project, make sure you have the following installed:
 
 1. Clone the repository:
    ```bash
-   git clone (https://github.com/gpariente/MakerMingle)
+   git clone https://github.com/gpariente/MakerMingle
    ```
 
 2. Navigate to the API directory and install dependencies:
