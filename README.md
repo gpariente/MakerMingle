@@ -4,7 +4,7 @@
 
 ## Overview
 
-Welcome to our DIY Forum project! This is a platform for DIY (Do it yourself) enthusiasts where you can explore various categories, view projects, add comments, and create new projects. The project is built using HTML, CSS, and JavaScript for the UI, and NestJS with MongoDB for the API.
+Welcome to our DIY Forum project! This is a platform for DIY (Do it yourself) enthusiasts where you can explore various categories, view projects, add comments, and create new projects. The project is built using HTML, CSS, and JavaScript with Tailwind CSS for styling in the UI, and NestJS with MongoDB for the API.
 
 ## Prerequisites
 
@@ -63,7 +63,6 @@ After running the NestJS server, you will see the collections created by NestJS 
 
 - **Login/Signup**: Securely register and authenticate users.
 - **Explore**: Browse through different categories of DIY projects.
-- **Project View**: View details of projects, including comments and descriptions.
 - **Comments**: Add comments to projects.
 - **Create Project**: Contribute by creating new DIY projects.
 
