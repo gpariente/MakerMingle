@@ -77,7 +77,7 @@ function login(event) {
   const email = formData.get("username");
   const password = formData.get("password");
 
-  fetch("http://localhost:3000/user/login", {
+  fetch("project-web-psi.vercel.app/user/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -92,7 +92,7 @@ function login(event) {
         closePopupLogin();
       } else {
         console.log(data);
-        alert('Incorrect email or password.');
+        alert("Incorrect email or password.");
         // Handle login failure
       }
     })
@@ -122,7 +122,7 @@ function signup(event) {
   const email = formData.get("username");
   const password = formData.get("password");
 
-  fetch("http://localhost:3000/user", {
+  fetch("project-web-psi.vercel.app/user", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -139,7 +139,6 @@ function signup(event) {
         alert(data.message);
         // Handle signup failure
       }
-
     })
     .catch((error) => {
       console.error("Error:", error);
