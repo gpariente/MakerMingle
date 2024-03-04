@@ -77,7 +77,7 @@ function login(event) {
   const email = formData.get("username");
   const password = formData.get("password");
 
-  fetch("project-web-psi.vercel.app/user/login", {
+  fetch("https://project-web-psi.vercel.app/user/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -122,7 +122,7 @@ function signup(event) {
   const email = formData.get("username");
   const password = formData.get("password");
 
-  fetch("project-web-psi.vercel.app/user", {
+  fetch("https://project-web-psi.vercel.app/user", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

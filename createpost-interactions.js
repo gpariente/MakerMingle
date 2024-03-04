@@ -26,7 +26,7 @@ function creatPost(categoryChoice, event) {
   }
 
   // Proceed with fetch request
-  fetch("project-web-psi.vercel.app/post", {
+  fetch("https://project-web-psi.vercel.app/post", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({

@@ -1,6 +1,6 @@
 function setCategories(name) {
   console.log(name);
-  fetch("project-web-psi.vercel.app/post/category", {
+  fetch("https://project-web-psi.vercel.app/post/category", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

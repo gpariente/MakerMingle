@@ -1,5 +1,5 @@
 function getCategories() {
-  fetch("project-web-psi.vercel.app/category", {
+  fetch("https://project-web-psi.vercel.app/category", {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -100,6 +100,6 @@ function saveCategoryChoice(id, name) {
 }
 
 // Event listener to fetch and display categories once the DOM is fully loaded
-document.addEventListener("DOMContentLoaded", function () {
-  getCategories(); // Fetch and render categories
-});
+// document.addEventListener("DOMContentLoaded", function () {
+//   getCategories(); // Fetch and render categories
+// });
